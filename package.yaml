@@ -1,0 +1,32 @@
+name:                priorityqueue-adaptor
+version:             0.0.0.0
+github:              "QuietJoon/priorityqueue-adaptor"
+license:             BSD3
+author:              "YongJoon Joe"
+maintainer:          "developer@yongjoon.net"
+copyright:           "2020 YongJoon Joe"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis:            Adaptor to switch among priority queue packages simply
+description:         Please see the README on GitHub at <https://github.com/QuietJoon/priorityqueue-adaptor#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- pqueue
+
+library:
+  source-dirs: src
+
+tests:
+  priorityqueue-adaptor-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - priorityqueue-adaptor
